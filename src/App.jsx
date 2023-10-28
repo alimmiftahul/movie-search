@@ -14,8 +14,8 @@ function App() {
         setPopular(query);
     };
     return (
-        <div className="bg-white  p-6">
-            <h1 className="text-center text-3xl font-bold mb-4">movies database</h1>
+        <div className="p-6 bg-white">
+            <h1 className="mb-4 text-3xl font-bold text-center">movies database</h1>
             {/* Input and Search Button */}
             <div className="flex items-center justify-center mt-4 mb-4">
                 <div className="flex flex-row items-center justify-center rounded-2xl bg-slate-100 shadow-xl w-[290px] text-black h-[40px] gap-x-2">
@@ -43,14 +43,14 @@ function App() {
                 </div>
             </div>
 
-            <div className="flex flex-wrap rounded-xl gap-x-4 text-black p-4 justify-center items-start">
+            <div className="flex flex-wrap items-start justify-center p-4 text-black rounded-xl gap-x-4">
                 {popular.map((movie, i) => (
-                    <div className="gap-x-4  gap-y-4 mt-4 mb-4  p-4 " key={i}>
+                    <div className="p-4 mt-4 mb-4 gap-x-4 gap-y-4 " key={i}>
                         <div className="flex flex-col rounded-xl text-slate-500 hover:scale-[1.1]">
                             <div className="flex font-bold text-black">{movie.title}</div>
                             <img
                                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
-                                className="hover:shadow-xl shadow-2xl rounded-xl"
+                                className="shadow-2xl hover:shadow-xl rounded-xl"
                                 width={300}
                                 height={450}
                                 alt=""

@@ -3,10 +3,10 @@ import axios from 'axios';
 export const getMovieList = async () => {
     try {
         const apiKey = import.meta.env.VITE_BASE_URL;
+        console.log(apiKey);
         const response = await axios.get(
             `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`
         );
-
         return response.data.results;
     } catch (error) {
         console.error('Error fetching data:', error);
